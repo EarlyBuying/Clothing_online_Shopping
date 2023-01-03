@@ -1,5 +1,138 @@
-.mainContaine {
-  width: 80%;
-  background-color: aquamarine;
-  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(38, 47, 49);
+}
+
+.container {
+  display: flex;
+  height: 500px;
+  width: 800px;
+  /* border: 1px solid black; */
+  margin: auto;
+  margin-top: 90px;
+  box-shadow: 5px 5px 20px black;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+  background-color: aqua;
+}
+
+.form h2 {
+  font-size: 3rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 30px;
+}
+
+.box {
+  padding: 12px;
+  width: 65%;
+  margin: 15px;
+  border: 1px solid black;
+  outline: none;
+  border-radius: 20px;
+  background-color: rgb(235, 223, 209);
+  font-weight: 400;
+}
+.subBtn {
+  padding: 12px 30px;
+  width: 40%;
+  margin-top: 40px;
+  background-color: black;
+  color: aliceblue;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+}
+
+.subBtn:hover {
+  cursor: pointer;
+  background-color: tomato;
+}
+
+form a {
+  text-decoration: none;
+  color: black;
+  margin-top: 20px;
+}
+form a:hover {
+  cursor: pointer;
+  color: tomato;
+}
+
+/* Right side */
+.right_Side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  background-color: rgb(154, 179, 179);
+}
+.right_Side img {
+  width: 400px;
+  height: auto;
+}
+
+/* //------------ */
+@media screen and (max-width: 600px) {
+  body {
+    background-color: olive;
+  }
+  .container {
+    /* border: 1px solid black; */
+    margin: auto;
+    /* width: 300px; */
+    width: auto;
+    align-items: center;
+    align-content: center;
+    margin-top: 190px;
+    box-shadow: 5px 5px 20px black;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-color: aqua;
+  }
+
+  .right_Side {
+    display: none;
+  }
+
+  .form h2 {
+    font-size: 3rem;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    margin: 20px;
+  }
+
+  .box {
+    padding: 12px;
+    max-width: 45%;
+    margin: 15px;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 20px;
+    background-color: rgb(235, 223, 209);
+    font-weight: 400;
+  }
+  .subBtn {
+    padding: 12px 30px;
+    /* width: 30%; */
+    margin-top: 40px;
+    background-color: black;
+    color: aliceblue;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+  }
 }
