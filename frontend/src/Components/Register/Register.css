@@ -7,92 +7,93 @@ body {
   background-color: rgb(38, 47, 49);
 }
 
-.log_container {
+.container {
   display: flex;
   height: 500px;
   width: 800px;
-  /* border: 1px solid black; */
   margin: auto;
   margin-top: 90px;
   box-shadow: 5px 5px 20px black;
 }
 
-.log_form {
+.form {
   display: flex;
   flex-direction: column;
   width: 50%;
   align-items: center;
-  background-color: aqua;
+  background-color: rgb(0, 219, 219);
 }
 
-.log_form h2 {
-  font-size: 3rem;
+.form h2 {
+  font-size: 2rem;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  margin: 40px;
+  margin: 20px;
 }
 
-.log_box {
-  padding: 12px;
+.box {
+  padding: 10px;
   width: 65%;
-  margin: 15px;
+  margin: 9px;
   border: 1px solid black;
   outline: none;
   border-radius: 20px;
   background-color: rgb(235, 223, 209);
-  font-weight: 400;
+  font-weight: 700;
 }
-.log_subBtn {
+.subBtn {
   padding: 12px 30px;
   width: 40%;
-  margin-top: 20px;
-  background-color: black;
-  color: aliceblue;
+  margin-top: 10px;
+  background-color: rgb(63, 18, 146);
+  color: rgb(175, 175, 175);
   font-weight: bold;
   border: none;
   outline: none;
   border-radius: 20px;
 }
 
-.log_subBtn:hover {
+.subBtn:hover {
   cursor: pointer;
   background-color: tomato;
 }
-
-.log_form a {
+.para_text {
+  color: rgb(10, 8, 5);
+}
+.login_link a {
   text-decoration: none;
   color: black;
   margin-top: 20px;
+  color: rgb(168, 0, 132);
 }
-.log_form a:hover {
+form a:hover {
   cursor: pointer;
   color: tomato;
 }
 
 /* Right side */
-.left_side {
+.right_Side {
   display: flex;
-  /* justify-content: center; */
-  align-items: center;
+  justify-content: center;
+  background-size: cover;
   width: 50%;
   background-color: rgb(154, 179, 179);
 }
-.left_side img {
+.right_Side img {
   width: 400px;
-  /* height: 500px; */
+  height: 500px;
 }
 
-@media screen and (max-width: 600px) {
+/* //------------ */
+/* @media screen and (max-width: 600px) {
   body {
-    background-color: olive;
+    background-color: rgb(45, 172, 155);
   }
   .container {
-    /* border: 1px solid black; */
     margin: auto;
-    /* width: 300px; */
     width: auto;
     align-items: center;
     align-content: center;
-    margin-top: 190px;
+    margin-top: 60px;
     box-shadow: 5px 5px 20px black;
   }
   .form {
@@ -121,11 +122,10 @@ body {
     outline: none;
     border-radius: 20px;
     background-color: rgb(235, 223, 209);
-    font-weight: 700;
+    font-weight: 400;
   }
   .subBtn {
     padding: 12px 30px;
-    /* width: 30%; */
     margin-top: 40px;
     background-color: black;
     color: aliceblue;
@@ -134,4 +134,4 @@ body {
     outline: none;
     border-radius: 20px;
   }
-}
+} */
