@@ -41,6 +41,7 @@ const NavBar = () => {
 
           <ul className="menu_links">
             <li className="nav_link">
+              
               <a href="">
                 <i class="bx bxs-home-alt-2 bx-tada icons"></i>
                 {slideOpen && <span className="text nav_text">Dashboard</span>}
@@ -55,7 +56,7 @@ const NavBar = () => {
             </li>
 
             <li className="nav_link">
-              <a href="">
+              <a href="/addItem">
                 <i class="bx  bxs-add-to-queue bx-tada icons"></i>
                 {slideOpen && <span className="text nav_text">Add Items</span>}
               </a>
@@ -81,7 +82,7 @@ const NavBar = () => {
 
         <div className="bottom_content">
           <li className="">
-            <a href="">
+            <a href="/l">
               <i class="bx bx-log-out bx-tada icons"></i>
               {slideOpen && <span className="text nav_text">Logout</span>}
             </a>
