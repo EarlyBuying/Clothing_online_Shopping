@@ -1,0 +1,82 @@
+.add {
+  display: flex;
+}
+.add .addContainer {
+  flex: 5.5;
+  background-color: rgba(231, 238, 238, 0.432);
+}
+.add_header,
+.add_body {
+  padding: 10px;
+  margin: 20px;
+  display: flex;
+  -webkit-box-shadow: 2px 4px 10px 1px rgb(36, 24, 24);
+  box-shadow: 2px 4px 10px 1px rgba(194, 183, 183, 0.966);
+}
+.add_body {
+  background-color: rgba(250, 235, 215, 0.623);
+}
+h2 {
+  color: rgb(118, 200, 228);
+  font-size: 20px;
+}
+
+.add_body .add_image {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.add_image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10%;
+  border: 1px solid;
+}
+.add_image input {
+  margin-top: 5px;
+  width: 180px;
+}
+.add_body .add_form {
+  flex: 2;
+}
+.add_form form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+form .form_input {
+  width: 40%;
+}
+form .form_input label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+form .form_input input {
+  min-width: 90%;
+  padding: 5px;
+  margin: 5px;
+}
+
+form .form_textarea {
+  width: 99%;
+}
+form .form_textarea label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+form .form_textarea textarea {
+  width: 90%;
+  height: 80px;
+  padding: 5px;
+  margin: 5px;
+}

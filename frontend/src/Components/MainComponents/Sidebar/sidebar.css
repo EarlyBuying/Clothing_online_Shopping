@@ -1,0 +1,83 @@
+.sidebar {
+  flex: 1;
+  border-right: 1.5px solid lirgb(129, 110, 110);
+  min-height: 100vh;
+  min-width: 12rem;
+  border-right: 1px solid gray;
+  
+  
+ 
+}
+/* --------Header-------------- */
+
+.sidebar .side_top {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  
+}
+.sidebar .side_top .side_logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(76, 88, 117);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+  /* Roboto, Open Sans and Lato */
+}
+.side_top hr {
+  height: 0;
+  border: 0.5px solid rgb(255, 255, 255);
+}
+/* --------Lists-------------- */
+
+.sidebar .side_mid {
+  padding-left: 18px;
+  padding-top: 15px;
+}
+.side_mid ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.side_mid ul .side_title {
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(133, 120, 120);
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.side_mid ul li {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  border-radius: 20px;
+  padding: 8px;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+}
+
+.side_mid ul li:hover {
+  background-color: rgba(173, 166, 214, 0.404);
+}
+ul li .side_Icons {
+  font-size: 22px;
+  color: gray;
+}
+ul li span {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(56, 27, 27);
+  margin-left: 8px;
+  transition: 10ms ease-in-out;
+}
+ul li span:hover {
+  color: rgb(16, 73, 197);
+}
+/* 
+  .sidebar  .side_bottom_btn{
+    margin-top: 25px;
+  } */

@@ -1,0 +1,17 @@
+.home {
+  display: flex;
+}
+
+.home .home_container {
+  flex: 5.5;
+  background-color: black;
+}
+.home .home_container h1 {
+  background-color: rgb(112, 80, 80);
+  color: aliceblue;
+  display: flex;
+  align-items: center;
+  margin: 150px;
+  padding: 50px;
+  justify-content: center;
+}
