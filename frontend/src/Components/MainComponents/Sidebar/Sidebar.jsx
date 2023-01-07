@@ -30,7 +30,7 @@ const Sidebar = () => {
             </li>
           </Link>
           <p className="side_title">Item Side</p>
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <Link to="/view" style={{ textDecoration: "none" }}>
             <li>
               <BallotIcon className="side_Icons" />
               <span>All Products</span>

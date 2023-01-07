@@ -10,6 +10,8 @@
   padding: 10px;
   margin: 20px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   -webkit-box-shadow: 2px 4px 10px 1px rgb(36, 24, 24);
   box-shadow: 2px 4px 10px 1px rgba(194, 183, 183, 0.966);
 }
@@ -31,21 +33,27 @@ h2 {
 }
 .add_image img {
   width: 200px;
-  height: 200px;
+  height: 250px;
   object-fit: cover;
   border-radius: 10%;
   border: 1px solid;
+  position: relative;
+  top: -60px;
 }
 .add_image input {
   margin-top: 5px;
+  position: relative;
+  top: -50px;
   width: 180px;
 }
 .add_body .add_form {
   flex: 2;
+  height: 455px;
 }
 .add_form form {
   display: flex;
   flex-wrap: wrap;
+  height: 85%;
   gap: 20px;
   justify-content: space-between;
 }
@@ -79,4 +87,24 @@ form .form_textarea textarea {
   height: 80px;
   padding: 5px;
   margin: 5px;
+}
+form button {
+  width: 150px;
+  height: 35px;
+  border-radius: 10px;
+  border: 1px solid;
+  background-color: rgb(226, 233, 232);
+  font-weight: 500;
+  font-size: 15px;
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+  position: relative;
+  bottom: 10px;
+  left: 100px;
+  transition: 0.2s; 
+}
+form button:hover {
+  background-color: rgb(245, 169, 169);
+  font-size: 14px;
 }
