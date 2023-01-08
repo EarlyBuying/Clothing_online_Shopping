@@ -21,8 +21,19 @@ mongoose
   .catch((err) => {
     console.log(err);
   });
+
+//-----------Product import
 const productRout = require("./Routes/productRoute");
 app.use("/product", productRout);
+//-----------Customer import
+const customerRoute = require("./Routes/customerRoute");
+app.use("/customer", customerRoute);
+//-----------Order import
+const OrderRouter = require("./Routes/orderRoute");
+app.use("/order", OrderRouter);
+//-----------Feedback import
+const feedback = require("./Routes/FeedBack");
+app.use("/feedback", feedback);
 
 app.listen(PORT, () => {
   console.log(`Server is running on ${PORT}`);

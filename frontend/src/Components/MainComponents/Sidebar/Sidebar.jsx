@@ -43,19 +43,19 @@ const Sidebar = () => {
             </li>
           </Link>
           <p className="side_title">Customer Side</p>
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <Link to="/customer" style={{ textDecoration: "none" }}>
             <li>
               <SupportAgentIcon className="side_Icons" />
               <span>Customers</span>
             </li>
           </Link>
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <Link to="/order" style={{ textDecoration: "none" }}>
             <li>
               <ShoppingCartIcon className="side_Icons" />
               <span>Orders</span>
             </li>
           </Link>
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <Link to="/feedback" style={{ textDecoration: "none" }}>
             <li>
               <FeedbackIcon className="side_Icons" />
               <span>View Feedback</span>
