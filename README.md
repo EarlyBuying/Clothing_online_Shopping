@@ -1,2 +1,6 @@
 # Clothing_online_Shopping
-There are women clothing items and anyone can buy online. There is available cash on delivery. 
+There is a online clothing site admin panel. Admin can,
+-Add Products,View ,Edit, Delete
+-View Customer details
+-View Customer orders
+-View Customer feedbacks
