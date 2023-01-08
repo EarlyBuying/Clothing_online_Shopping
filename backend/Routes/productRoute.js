@@ -3,7 +3,7 @@ const router = express.Router();
 
 const ModelProducts = require("../models/ModelProducts");
 // -------------ADD--------------------
-router.route("/add").post((req, res) => {
+router.route("/").post((req, res) => {
   const { name, code, price, weight, color, category, description } = req.body;
 
   const newProduct = new ModelProducts({
@@ -27,7 +27,7 @@ router.route("/add").post((req, res) => {
 });
 
 //-------view
-router.route("/view").get((req, res) => {
+router.route("/").get((req, res) => {
   ModelProducts.find()
     .then((items) => {
       res.json(items);
@@ -37,6 +37,40 @@ router.route("/view").get((req, res) => {
     });
 });
 
-//update---------------------------------------
+//---------------------update---------------------------------------
+router.route("/:id").put(async (req, res) => {
+  let productId = req.params.id;
+  const { name, code, price, weight, color, category, description } = req.body;
+
+  const updateProduct = {
+    name,
+    code,
+    price,
+    weight,
+    color,
+    category,
+    description,
+  };
+  const update = await ModelProducts.findByIdAndUpdate(productId, updateProduct)
+    .then(() => {
+      res.status(200).json(" Product Updated");
+    })
+    .catch((err) => {
+      res.status(500).send({ status: "Error with update", error: err.message });
+      console.log(err);
+    });
+});
+
+//--------------------Delete---------------------------------------
+router.route("/:id").delete((req, res) => {
+  let productId = req.params.id;
+  ModelProducts.findByIdAndDelete(productId)
+    .then(() => {
+      res.status(200).send(console.log("Deleted"));
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
 
 module.exports = router;

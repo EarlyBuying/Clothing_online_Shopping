@@ -59,26 +59,19 @@
   min-width: 20px;
   height: 20px;
 }
-.action_cell {
-  display: flex;
- 
- 
-}
-.view_tablecell .action_icons {
-  width: 60px;
-  height: 15px;
-  border-radius: 5px;
-  margin-bottom: 2px;
- position: relative;
+
+.view_tablecell button {
+  width: 54px;
+  margin-right: 2px;
+  border: none;
+  border-radius: 15px;
   cursor: pointer;
-  
- 
+  box-shadow: 1px 2px 5px rgba(63, 48, 38, 0.603) inset;
 }
-.action_icons:hover {
-  background-color: #ac9d9d;
-  width: 60px;
-  height: 15px;
-  border-radius: 5px;
-  margin-bottom: 2px;
- 
+
+.view_tablecell .delete:hover {
+  box-shadow: 1px 1px 15px rgba(218, 93, 9, 0.486);
+}
+.view_tablecell .edit:hover {
+  box-shadow: 1px 1px 15px rgba(9, 218, 9, 0.329);
 }

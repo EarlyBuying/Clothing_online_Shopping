@@ -3,17 +3,17 @@ import Sidebar from "../../MainComponents/Sidebar/Sidebar";
 import Navbar from "../../MainComponents/Navbar/Navbar";
 import axios from "axios";
 import Swal from "sweetalert2";
-import "./add.css";
+import "../AddProducts/add.css";
 
-const Add = () => {
+const Update = ({ onClick, id, formData }) => {
   // const [file, setFile] = useState("");
-  const [name, setName] = useState("");
-  const [code, setCode] = useState("");
-  const [price, setPrice] = useState("");
-  const [weight, setWeight] = useState("");
-  const [color, setColor] = useState("");
-  const [category, setCategory] = useState("");
-  const [description, setDescription] = useState("");
+  const [name, setName] = useState(formData.name);
+  const [code, setCode] = useState(formData.code);
+  const [price, setPrice] = useState(formData.price);
+  const [weight, setWeight] = useState(formData.weight);
+  const [color, setColor] = useState(formData.color);
+  const [category, setCategory] = useState(formData.category);
+  const [description, setDescription] = useState(formData.description);
 
   function sendItems(e) {
     e.preventDefault();
@@ -27,8 +27,9 @@ const Add = () => {
       category,
       description,
     };
+    console.log(itemsSet);
     axios
-      .post("http://localhost:4500/product/", itemsSet)
+      .put(`http://localhost:4500/product/${id}`, itemsSet)
       .then(() => {
         setName("");
         setCode("");
@@ -38,12 +39,13 @@ const Add = () => {
         setCategory("");
         setDescription("");
         Swal.fire({
-          position: "top",
+          position: "center",
           icon: "success",
-          title: "New product has been added",
+          title: "New product has been updated",
           showConfirmButton: false,
           timer: 1500,
         });
+        return onClick();
       })
       .catch(() => {
         alert("Server Error");
@@ -57,10 +59,10 @@ const Add = () => {
         <Navbar />
         {/* form Header */}
         <div className="add_header">
-          <h2>Add New Products</h2>
+          <h2>Update Product</h2>
         </div>
         {/* form Body */}
-
+        <div type="text" value={formData.Id} disabled="true" />
         <div className="add_body">
           <div className="add_image">
             {/* <img
@@ -143,7 +145,7 @@ const Add = () => {
                   placeholder="Input Item Description"
                 />
               </div>
-              <button onClick={sendItems}>Product Submit</button>
+              <button onClick={sendItems}>Update</button>
             </form>
           </div>
         </div>
@@ -152,4 +154,4 @@ const Add = () => {
   );
 };
 
-export default Add;
+export default Update;
