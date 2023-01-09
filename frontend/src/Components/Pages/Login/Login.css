@@ -3,9 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  background-color: rgb(38, 47, 49);
-}
 
 .log_container {
   display: flex;
@@ -13,7 +10,7 @@ body {
   width: 800px;
   /* border: 1px solid black; */
   margin: auto;
-  margin-top: 90px;
+  margin-top: 40px;
   box-shadow: 5px 5px 20px black;
 }
 
@@ -22,10 +19,11 @@ body {
   flex-direction: column;
   width: 50%;
   align-items: center;
-  background-color: aqua;
+  background-color: rgba(0, 255, 255, 0.322);
 }
 
-.log_form h2 {
+.log_form .sign_in_title {
+  color: rgb(10, 6, 6);
   font-size: 3rem;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   margin: 40px;
@@ -67,6 +65,7 @@ body {
   cursor: pointer;
   color: tomato;
 }
+ 
 
 /* Right side */
 .left_side {

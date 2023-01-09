@@ -1,0 +1,47 @@
+.navBar_land {
+  height: 50px;
+  background-color: rgb(16, 190, 202);
+  border-bottom: 0.5px solid rgb(172, 152, 152);
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: gray;
+}
+.navBar_land .nav_wrapper_land {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav_wrapper_land .nav_title_nav {
+  margin-left: 20px;
+  margin-top: 5px;
+  width: 55%;
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  padding: 2px;
+}
+.nav_wrapper_land .nav_title_nav .land_heding {
+  width: 100%;
+}
+.nav_wrapper_land .nav_item_land {
+  list-decoration: none;
+}
+.nav_wrapper_land .nav_item_land {
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  align-items: center;
+}
+.nav_item_land .login_btn {
+  width: 80px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-right: 8px;
+}

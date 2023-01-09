@@ -1,12 +1,9 @@
 .sidebar {
   flex: 1;
   border-right: 1.5px solid lirgb(129, 110, 110);
-  min-height: 100vh;
+  height: 100vh;
   min-width: 12rem;
   border-right: 1px solid gray;
-  
-  
- 
 }
 /* --------Header-------------- */
 
@@ -16,7 +13,6 @@
   align-items: center;
   justify-content: center;
   background-color: rgb(255, 255, 255);
-  
 }
 .sidebar .side_top .side_logo {
   font-size: 20px;
