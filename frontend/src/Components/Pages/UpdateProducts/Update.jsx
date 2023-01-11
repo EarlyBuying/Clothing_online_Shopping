@@ -4,9 +4,39 @@ import Navbar from "../../MainComponents/Navbar/Navbar";
 import axios from "axios";
 import Swal from "sweetalert2";
 import "../AddProducts/add.css";
+import { storage } from "../../FireBase/FireBaseConfig";
+import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 
 const Update = ({ onClick, id, formData }) => {
-  // const [file, setFile] = useState("");
+  const [file, setFile] = useState("");
+  const [counter, setCounter] = useState("");
+  const uplodaImage = () => {
+    if (!file) {
+      alert("There is not any image");
+    }
+    const storagePath = ref(storage, `/images/${file.name}`);
+    const uploadTast = uploadBytesResumable(storagePath, file);
+    uploadTast.on(
+      "state_changed",
+      (snapshot) => {
+        const percentage = Math.round(
+          (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+        );
+        setCounter(percentage);
+      },
+      (err) => console.log(err),
+      () => {
+        getDownloadURL(uploadTast.snapshot.ref).then((url) => {
+          console.log(url);
+          setImageURL(url);
+        });
+      }
+    );
+
+    console.log(file);
+  };
+
+  const [imageURL, setImageURL] = useState(formData.imageURL);
   const [name, setName] = useState(formData.name);
   const [code, setCode] = useState(formData.code);
   const [price, setPrice] = useState(formData.price);
@@ -19,6 +49,7 @@ const Update = ({ onClick, id, formData }) => {
     e.preventDefault();
 
     const itemsSet = {
+      imageURL,
       name,
       code,
       price,
@@ -31,6 +62,7 @@ const Update = ({ onClick, id, formData }) => {
     axios
       .put(`http://localhost:4500/product/${id}`, itemsSet)
       .then(() => {
+        setImageURL("");
         setName("");
         setCode("");
         setPrice("");
@@ -65,20 +97,27 @@ const Update = ({ onClick, id, formData }) => {
         <div type="text" value={formData.Id} disabled="true" />
         <div className="add_body">
           <div className="add_image">
-            {/* <img
-              src={
-                file
-                  ? URL.createObjectURL(file)
-                  : "https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"
-              }
-              alt="No image icon"
-            /> */}
-            {/* <input
-              type="file"
-              onChange={(e) => setFile(e.target.files[0])}
-              name="Images"
-              id="files"
-            /> */}
+            <div className="image_section">
+              <img
+                src={
+                  file
+                    ? URL.createObjectURL(file)
+                    : "https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"
+                }
+                alt="No icon"
+              />
+
+              <input
+                type="file"
+                onChange={(e) => setFile(e.target.files[0])}
+                name="Images"
+                id="imageFile"
+              />
+
+              <button className="img_upbtn" onClick={uplodaImage}>
+                {!counter ? <>Upload Image </> : <>{counter}%</>}
+              </button>
+            </div>
           </div>
           <div className="add_form">
             <form>

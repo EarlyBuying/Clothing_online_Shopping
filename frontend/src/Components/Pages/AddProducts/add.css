@@ -31,21 +31,46 @@ h2 {
   align-items: center;
   justify-content: center;
 }
+.add_image .image_section { 
+  height: 420px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
 .add_image img {
+  position: absolute;
   width: 200px;
   height: 250px;
   object-fit: cover;
   border-radius: 10%;
-  border: 1px solid;
-  position: relative;
-  top: -60px;
+  border: 1px solid;  
+  top: 0;
 }
-.add_image input {
-  margin-top: 5px;
-  position: relative;
-  top: -50px;
+.add_image input { 
+   position: absolute;
+  top: 260px;
+  
   width: 180px;
 }
+.add_image .img_upbtn { 
+  position: absolute;
+  bottom: 100px; 
+  width: 120px;
+  height: 25px;
+  border-radius: 5px;
+  border: 1px solid;
+  cursor: pointer;
+}
+
+.add_image .img_upbtn:hover { 
+  background-color: rgb(245, 169, 169);
+  font-size: 14px;
+}
+
+
 .add_body .add_form {
   flex: 2;
   height: 455px;
@@ -102,7 +127,7 @@ form button {
   position: relative;
   bottom: 10px;
   left: 100px;
-  transition: 0.2s; 
+  transition: 0.2s;
 }
 form button:hover {
   background-color: rgb(245, 169, 169);

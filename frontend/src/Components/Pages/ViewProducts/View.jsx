@@ -129,7 +129,7 @@ const View = () => {
                           {row.name}
                         </TableCell>
                         <TableCell align="center" className="view_tablecell">
-                          <img src="" alt="" />
+                          <img src={row.imageURL} alt="" />
                         </TableCell>
                         <TableCell
                           align="center"

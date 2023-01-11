@@ -4,9 +4,10 @@ const router = express.Router();
 const ModelProducts = require("../models/ModelProducts");
 // -------------ADD--------------------
 router.route("/").post((req, res) => {
-  const { name, code, price, weight, color, category, description } = req.body;
+  const {imageURL, name, code, price, weight, color, category, description } = req.body;
 
   const newProduct = new ModelProducts({
+    imageURL,
     name,
     code,
     price,
@@ -40,9 +41,10 @@ router.route("/").get((req, res) => {
 //---------------------update---------------------------------------
 router.route("/:id").put(async (req, res) => {
   let productId = req.params.id;
-  const { name, code, price, weight, color, category, description } = req.body;
+  const {imageURL, name, code, price, weight, color, category, description } = req.body;
 
   const updateProduct = {
+    imageURL,
     name,
     code,
     price,
